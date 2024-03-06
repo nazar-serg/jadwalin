@@ -1,0 +1,15 @@
+
+.nav__list {
+    display: flex;
+    @include adaptiveValue("column-gap", 60, 15, 1210, 992, 1);
+    li {
+        a {
+            font-size: r(16);
+            line-height: math.div(18, 16);
+            text-transform: uppercase;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}

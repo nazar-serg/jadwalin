@@ -1,0 +1,133 @@
+
+.card {
+    display: flex;
+    flex-direction: column;
+    &__top {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+    &--popular {
+        color: $white;
+        height: 473px;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        margin-top: -62px;
+        &::after {
+            content: '';
+            background-color: $secondColor;
+            width: 100%;
+            height: calc(100% + 20px);
+            border-radius: 26px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+    &__most-popular {
+        background-color: #403879;
+        color: $accentColor;
+        padding: 7px 16px;
+        border-radius: 14px;
+        font-family: "Poppins ExtraBold";
+        letter-spacing: 0.83px;
+        font-size: 10px;
+        line-height: 15px;
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 121px;
+    }
+}
+.card__price {
+    margin-bottom: 20px;
+}
+.card__price-num {
+    font-size: 36px;
+    line-height: 46px;
+    font-family: "Poppins Bold";
+    color: $secondColor;
+    &--popular {
+        color: $white;
+    }
+}
+.card__price-month {
+    font-size: 17px;
+    line-height: 25px;
+}
+.card__title {
+    font-size: 28px;
+    line-height: 42px;
+    color: $secondColor;
+    margin-bottom: 20px;
+    &--popular {
+        color: $white;
+    }
+   
+}
+.card__desc {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 14px;
+}
+.card__list {
+    &--popular {
+        margin-bottom: 20px;
+    }
+    li {
+        font-size: 15px;
+        line-height: 22px;
+        position: relative;
+        padding-left: 30px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: url(../img/icon/check-circle-2.svg) no-repeat;
+            top: 0;
+            left: 0;
+        }
+    }
+    &--popular {
+        &::before {
+            background: url(../img/icon/check-circle-1.svg) no-repeat;
+        }
+    }
+}
+.card__btn {
+    background-color: $secondColor;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    padding: 11px 55px;
+    display: inline-block;
+    border-radius: 25px;
+    color: $white;
+    max-width: 207px;
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    margin-top: auto;
+    &:hover {
+        opacity: 0.8;
+    }
+    &--popular {
+        text-align: center;
+        background-color: $accentColor;
+        border-radius: 25px;
+        color: $white;
+        display: block;
+        max-width: 100%;
+        margin-top: auto;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}

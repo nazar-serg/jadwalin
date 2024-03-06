@@ -1,0 +1,27 @@
+.plans-pricing {
+    padding-top: 40px;
+    &__title {
+        font-size: 40px;
+        line-height: 60px;
+        font-family: "Poppins Regular";
+        color: $secondColor;
+    }
+    &__heading {
+        display: grid;
+        grid-template-columns: auto 220px;
+        grid-gap: 25px;
+        grid-column: 25px;
+        padding-bottom: 90px;
+    }
+    &__title {
+        grid-column: span 2;
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: minmax(auto, 232px) minmax(auto, 232px) minmax(auto, 292px);
+        justify-content: space-between;
+        background: rgba(255, 255, 255, 0.64);
+        padding: 40px 45px 40px 68px;
+        border-radius: 26px;
+    }
+}

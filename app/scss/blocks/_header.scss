@@ -1,0 +1,14 @@
+.header {
+    padding: 28px 0;
+    &__container-big {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__btn {
+        padding: 10px 30px;
+        font-size: 14px;
+        line-height: 18px;
+        
+    }
+}
