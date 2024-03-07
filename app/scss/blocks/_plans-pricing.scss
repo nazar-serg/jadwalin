@@ -5,23 +5,77 @@
         line-height: 60px;
         font-family: "Poppins Regular";
         color: $secondColor;
+        @media screen and (max-width: 322px) {
+            font-size: 38px;
+            line-height: 58px;
+        }
     }
     &__heading {
         display: grid;
         grid-template-columns: auto 220px;
-        grid-gap: 25px;
-        grid-column: 25px;
+        row-gap: 25px;
+        column-gap: 25px;
         padding-bottom: 90px;
+        @media screen and (max-width: 576px) {
+            grid-template-columns: auto;
+            row-gap: inherit;
+            padding-bottom: 32px;
+        }
     }
     &__title {
         grid-column: span 2;
+        @media screen and (max-width: 576px) {
+            grid-column: inherit;
+            margin-bottom: 20px;
+        }
+    }
+    &__desc {
+        font-size: 18px;
+        line-height: 27px;
+        @media screen and (max-width: 576px) {
+            margin-bottom: 37px;
+        }
     }
     &__cards {
         display: grid;
         grid-template-columns: minmax(auto, 232px) minmax(auto, 232px) minmax(auto, 292px);
         justify-content: space-between;
+        @include adaptiveValue("column-gap", 20, 10);
         background: rgba(255, 255, 255, 0.64);
         padding: 40px 45px 40px 68px;
         border-radius: 26px;
+        margin-bottom: 69px;
+        @media screen and (max-width: 865px){
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 48px;
+        }
+        @media screen and (max-width: 700px){
+            grid-template-columns: auto;
+        }
+        @media screen and (max-width: 576px) {
+            padding: 32px 0;
+        }
+    }
+    &__tabs {
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        background-color: #fff;
+        border-radius: 22px;
+        max-width: 220px;
+        @media screen and (max-width: 576px) {
+            margin: auto;
+        }
+    }
+    &__tabs-btn {
+        padding: 13px 24px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        text-transform: uppercase;
+        letter-spacing: 0.83px;
+        cursor: pointer;
+       
+        height: 44px;
     }
 }

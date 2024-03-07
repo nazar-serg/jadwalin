@@ -10,21 +10,22 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__container-big">
-            <div class="header__nav-btn">
-                <button class="header__nav-icon-btn">
-                    <img src="./app/img/header/menu-burger.svg" alt="Menu burger">
-                </button>
-            </div>
-            <a href="#!" class="header__logo">
-                <img src="app/img/header/logo.svg" alt="Logo">
-            </a>
-
-            <a href="#!" class="header__btn button">Join Now</a>
-        </div>
-    </header>
     <div class="wrapper">
+        <header class="header">
+            <div class="header__container-big">
+                <div class="header__nav-btn">
+                    <button class="header__nav-icon-btn">
+                        <img src="./app/img/header/menu-burger.svg" alt="Menu burger">
+                    </button>
+                </div>
+                <a href="#!" class="header__logo">
+                    <img src="app/img/header/logo.svg" alt="Logo">
+                </a>
+
+                <a href="#!" class="header__btn button">Join Now</a>
+            </div>
+        </header>
+
         <main>
             <section class="plans-pricing">
                 <div class="plans-pricing__container">
@@ -37,14 +38,20 @@
                                 scale.</p>
                         </div>
                         <div class="plans-pricing__tabs">
-                            <div class="plans-pricing__tabs-btn">MONTHLY</div>
-                            <div class="plans-pricing__tabs-btn">YEARLY</div>
+                            <div class="plans-pricing__tabs-btn plans-pricing__tabs-btn--monthly active">MONTHLY
+                            </div>
+                            <div class="plans-pricing__tabs-btn plans-pricing__tabs-btn--yearly">
+                                YEARLY</div>
                         </div>
                     </div>
-                    <div class="plans-pricing__cards">
+                    <div class=" plans-pricing__cards">
                         <div class="plans-pricing__card card">
-                            <div class="card__price">
+                            <div class="card__price card__price--month">
                                 <span class="card__price-num">$19</span>
+                                <span class="card__price-month">/month</span>
+                            </div>
+                            <div class="card__price card__price--overlay d-nones">
+                                <span class="card__price-num">$12</span>
                                 <span class="card__price-month">/month</span>
                             </div>
                             <div class="card__title">
@@ -63,8 +70,12 @@
                             </a>
                         </div>
                         <div class="plans-pricing__card card">
-                            <div class="card__price">
+                            <div class="card__price card__price--month">
                                 <span class="card__price-num">$54</span>
+                                <span class="card__price-month">/month</span>
+                            </div>
+                            <div class="card__price card__price--overlay d-nones">
+                                <span class="card__price-num">$36</span>
                                 <span class="card__price-month">/month</span>
                             </div>
                             <div class="card__title">
@@ -89,8 +100,12 @@
                                     MOST POPULAR
                                 </div>
                             </div>
-                            <div class="card__price">
+                            <div class="card__price card__price--month">
                                 <span class="card__price-num card__price-num--popular">$89</span>
+                                <span class="card__price-month card__price-month--popular">/month</span>
+                            </div>
+                            <div class="card__price card__price--overlay d-nones">
+                                <span class="card__price-num card__price-num--popular">$56</span>
                                 <span class="card__price-month card__price-month--popular">/month</span>
                             </div>
                             <div class="card__title card__title--popular">
@@ -115,6 +130,7 @@
             </section>
         </main>
     </div>
+    <script src="./app/js/app.min.js"></script>
 </body>
 
 </html>

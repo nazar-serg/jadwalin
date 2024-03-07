@@ -2,6 +2,9 @@
 .card {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 576px) {
+      padding: 0 28px;
+    }
     &__top {
         display: flex;
         justify-content: flex-end;
@@ -16,6 +19,9 @@
         position: relative;
         z-index: 1;
         margin-top: -62px;
+        @media screen and (max-width: 865px){
+          margin-top: 0;
+        }
         &::after {
             content: '';
             background-color: $secondColor;
@@ -26,6 +32,12 @@
             top: 0;
             left: 0;
             z-index: -1;
+            box-shadow: 0 42px 34px 0 rgba(82, 67, 194, 0.30);
+            @media screen and (max-width: 576px) {
+              left: 8px;
+              right: 8px;
+              width: auto;
+            }
         }
     }
     &__most-popular {
@@ -44,6 +56,7 @@
 }
 .card__price {
     margin-bottom: 20px;
+  
 }
 .card__price-num {
     font-size: 36px;
@@ -74,6 +87,9 @@
     margin-bottom: 14px;
 }
 .card__list {
+  @media screen and (max-width: 865px){
+    margin-bottom: 40px;
+}
     &--popular {
         margin-bottom: 20px;
     }
@@ -116,7 +132,7 @@
     cursor: pointer;
     margin-top: auto;
     &:hover {
-        opacity: 0.8;
+        background-color: #A847CC;
     }
     &--popular {
         text-align: center;
@@ -127,7 +143,63 @@
         max-width: 100%;
         margin-top: auto;
         &:hover {
-            opacity: 0.8;
+            background-color: #A847CC;
         }
     }
 }
+.d-nones {
+    display: none;
+    animation: fadeIn ease 5s;
+}
+.active {
+    background-color: $accentColor;
+    color: #fff;
+    border-radius: 22px;
+    box-shadow: 0 6px 12px 0 rgba(82, 67, 194, 0.16);
+    animation: fadeIn ease 1s;
+}
+  
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+  }
